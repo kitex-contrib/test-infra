@@ -37,9 +37,9 @@ data:
 
     config_updater:
       maps:
-        labels.yaml:
+        config/labels.yaml:
           name: label-config
-        member.yaml:
+        config/member.yaml:
           name: member-config
 # ---
 # apiVersion: v1
