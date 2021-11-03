@@ -1,0 +1,94 @@
+# This is a test configuration file that describes the member architecture of kitex-contrib's resolver-dns repository.
+# It may be helpful to have a look at the demo configuration below the test one.
+orgs:
+  kitex-contrib:
+    company: ByteDance
+    name: kitex-contrib
+    email: conduct@cloudwego.io
+    url: http://www.cloudwego.io
+    description: Useful extensions for kitex.
+    has_organization_projects: false
+    has_repository_projects: true
+    default_repository_permission: read
+    members_can_create_repositories: false
+    # location : China
+    # twitter_username:
+    # billing_email:
+    # two_factor_requirement_enabled: true
+    # members_allowed_repository_creation_type: all
+    # members_can_create_public_repositories: false
+    # members_can_create_private_repositories: false
+    # members_can_create_internal_repositories: false
+    # members_can_create_pages: true
+
+    members:
+    - Summer-Field
+    - Mel0day
+    - pkumza
+    admins:
+    - GuangmingLuo
+    - Jeffwan
+    - dyxushuai
+    - Hchenn
+    - joway
+    - lsjbd
+    - PureWhiteWu
+    - simon0-o
+    - SinnerA
+    - YangruiEmma
+
+    teams:
+      bot-ci-team:
+        description: people working on oss infra
+        privacy: closed
+
+        members:
+        - Summer-Field
+        maintainers:
+        - Jeffwan
+        repos:
+          resolver-dns: write
+# Here is the demo configuration file.
+# Before you build up your own configuration file please have a close look at it.
+#
+#orgs:
+#  this-org:
+#    # org settings
+#    company: foo
+#    email: foo
+#    name: foo
+#    description: foo
+#    has_organization_projects: true
+#    has_repository_projects: true
+#    default_repository_permission: read
+#    members_can_create_repositories: false
+#
+#    # org member settings
+#    members:
+#    - anne
+#    - bob
+#    admins:
+#    - carl
+#
+#    # team settings
+#    teams:
+#      node:
+#        # team config
+#        description: people working on node backend
+#        privacy: closed
+#        previously:
+#        - backend  # If a backend team exists, rename it to node
+#
+#        # team members
+#        members:
+#        - anne
+#        maintainers:
+#        - jane
+#        repos: # Ensure the team has the following permissions levels on repos in the org
+#          some-repo: admin
+#          other-repo: read
+#      another-team:
+#        ...
+#      ...
+# that-org:
+#    ...
