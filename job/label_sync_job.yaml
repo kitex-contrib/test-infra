@@ -29,9 +29,9 @@ spec:
         image: cr-cn-beijing.volces.com/k8s-prow/label_sync:v20211022-effa07f2d2
         args:
         - --config=/etc/config/labels.yaml
-        - --confirm=true
+##        - --confirm=true
         - --orgs=kitex-contrib
-        - --token=/etc/github/oauth
+        - --token=/etc/github/token
         volumeMounts:
         - name: oauth
           mountPath: /etc/github
