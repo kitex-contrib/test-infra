@@ -22,7 +22,6 @@ orgs:
     # members_can_create_pages: true
 
     members:
-    - Summer-Field
     - Mel0day
     - pkumza
     admins:
