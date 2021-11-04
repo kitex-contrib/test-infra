@@ -470,7 +470,7 @@ repos:
   kitex-contrib/test-infra:
     labels:
       - color: 0052cc
-        description: Issues or PRs related to the test-infra
+        description: Issues or PRs related to the test infra
         name: area/test-infra-kitex
         target: both
         addedBy: label
