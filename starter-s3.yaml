@@ -33,6 +33,7 @@ data:
         - yuks
         - cla
       kitex-contrib/test-infra:
+        plugins:
         - config-updater
 
     config_updater:
