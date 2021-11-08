@@ -40,8 +40,8 @@ data:
       maps:
         config/labels.yaml:
           name: label-config
-        config/member.yaml:
-          name: member-config
+        config/member_management/kitex_contrib.yaml:
+          name: kitex_contrib-member-config
 # ---
 # apiVersion: v1
 # kind: Secret

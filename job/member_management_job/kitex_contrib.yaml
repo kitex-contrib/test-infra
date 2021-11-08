@@ -13,7 +13,7 @@ spec:
         image: cr-cn-beijing.volces.com/k8s-prow/peribolos:v20211022-effa07f2d2
         imagePullPolicy: Always  # Good practice for dev/debugging, bad for prod
         args:
-        - --config-path=/etc/config/member.yaml
+        - --config-path=/etc/config/kitex_contrib.yaml
         - --github-token-path=/etc/github/token
         - --min-admins=2
         - --fix-org
@@ -35,4 +35,4 @@ spec:
           secretName: oauth-token
       - name: test-config
         configMap:
-          name: member-config
+          name: kitex_contrib-member-config
