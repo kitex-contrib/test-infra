@@ -126,21 +126,11 @@ data:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/invalid-owners-file
-        orgs:
-        - kitex-contrib
+        repos:
+        - kitex-contrib/test-infra
 
     decorate_all_jobs: true
     presubmits:
-      kitex-contrib/resolver-dns:
-      - name: resolver-dns-presubmit  # convention: (job type)-(repo name)-(suite name)-(test type)
-        branches:
-        - main
-        decorate: true
-        always_run: true
-        spec:
-          containers:
-          - image: alpine
-            command: ["/bin/date"]
 
     periodics:
     - interval: 20m
