@@ -118,7 +118,9 @@ data:
 
     tide:
       queries:
-      - labels:
+      - repos:
+        - kitex-contrib/test-infra
+        labels:
         - lgtm
         - approved
         missingLabels:
@@ -126,8 +128,6 @@ data:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/invalid-owners-file
-        repos:
-        - kitex-contrib/test-infra
 
     decorate_all_jobs: true
     presubmits:
