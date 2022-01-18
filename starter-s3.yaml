@@ -118,7 +118,19 @@ data:
 
     tide:
       queries:
-      - labels:
+      - orgs:
+        - kitex-contrib
+        excludedRepos:
+        - monitor-prometheus
+        - registry-nacos
+        - tracer-opentracing
+        - registry-eureka
+        - registry-consul
+        - registry-polaris
+        - registry-etcd
+        - registry-zookeeper
+        - resolver-dns
+        labels:
         - lgtm
         - approved
         missingLabels:
@@ -126,8 +138,6 @@ data:
         - do-not-merge/hold
         - do-not-merge/work-in-progress
         - do-not-merge/invalid-owners-file
-        repos:
-        - kitex-contrib/test-infra
 
     decorate_all_jobs: true
     presubmits:
