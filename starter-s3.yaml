@@ -140,7 +140,18 @@ data:
         - do-not-merge/invalid-owners-file
 
     decorate_all_jobs: true
+
     presubmits:
+      kitex-contrib/test-infra:
+      - name: test-infra-presubmit  # convention: (job type)-(repo name)-(suite name)-(test type)
+        branches:
+        - main
+        decorate: true
+        always_run: true
+        spec:
+          containers:
+          - image: alpine
+            command: ["/bin/date"]
 
     periodics:
     - interval: 20m
