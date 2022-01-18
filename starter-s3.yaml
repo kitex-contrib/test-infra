@@ -139,6 +139,9 @@ data:
         - do-not-merge/work-in-progress
         - do-not-merge/invalid-owners-file
 
+      merge_method:
+        kitex-contrib/test-infra: squash
+
     decorate_all_jobs: true
     presubmits:
 
