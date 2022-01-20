@@ -1,4 +1,4 @@
-# test-infra
+# test-infra.
 
 test-infra is a CI/CD system aimming at kitex-contrib's Open Source Project Management.
 
