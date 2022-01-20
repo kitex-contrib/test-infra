@@ -121,15 +121,15 @@ data:
       - orgs:
         - kitex-contrib
         excludedRepos:
-        - monitor-prometheus
-        - registry-nacos
-        - tracer-opentracing
-        - registry-eureka
-        - registry-consul
-        - registry-polaris
-        - registry-etcd
-        - registry-zookeeper
-        - resolver-dns
+        - kitex-contrib/monitor-prometheus
+        - kitex-contrib/registry-nacos
+        - kitex-contrib/tracer-opentracing
+        - kitex-contrib/registry-eureka
+        - kitex-contrib/registry-consul
+        - kitex-contrib/registry-polaris
+        - kitex-contrib/registry-etcd
+        - kitex-contrib/registry-zookeeper
+        - kitex-contrib/resolver-dns
         labels:
         - lgtm
         - approved
@@ -483,6 +483,9 @@ spec:
       - name: s3-credentials
         secret:
           secretName: s3-credentials
+      - name: github-token-robot
+        secret:
+          secretName: github-token-robot
 ---
 apiVersion: v1
 kind: Service
