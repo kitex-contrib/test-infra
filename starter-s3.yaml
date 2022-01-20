@@ -437,7 +437,7 @@ spec:
       serviceAccountName: "tide"
       containers:
       - name: tide
-        image: cr-cn-beijing.volces.com/k8s-prow/tide:v20211022-effa07f2d2-update
+        image: cr-cn-beijing.volces.com/k8s-prow/tide:v20220119-d833b01b47-update
         args:
         - --dry-run=false
         - --config-path=/etc/config/config.yaml
