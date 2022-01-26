@@ -1,0 +1,39 @@
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: peribolos
+spec:
+  backoffLimit: 2
+  template:
+    metadata:
+      name: peribolos
+    spec:
+      containers:
+      - name: peribolos
+        image: cr-cn-beijing.volces.com/k8s-prow/peribolos:v20211022-effa07f2d2
+        imagePullPolicy: Always  # Good practice for dev/debugging, bad for prod
+        args:
+        - --config-path=/etc/config/<your-org-name>.yaml
+        - --github-token-path=/etc/github/token
+        - --min-admins=2
+        - --fix-org
+        - --fix-org-members
+        - --fix-teams
+        - --fix-team-members
+        ##- --confirm
+        volumeMounts:
+        - name: oauth
+          mountPath: /etc/github
+          readOnly: true
+        - name: <your-org-name>-volumes
+          mountPath: /etc/config
+          readOnly: true
+      restartPolicy: Never
+      volumes:
+      - name: oauth
+        secret:
+          secretName: oauth-token
+      - name: <your-org-name>-volumes
+        configMap:
+          name: <your-org-name>-member-config
