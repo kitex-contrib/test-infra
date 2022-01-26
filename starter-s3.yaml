@@ -437,7 +437,7 @@ spec:
       serviceAccountName: "tide"
       containers:
       - name: tide
-        image: cr-cn-beijing.volces.com/k8s-prow/tide:v20211022-effa07f2d2-update
+        image: cr-cn-beijing.volces.com/k8s-prow/tide:v20211022-effa07f2d2
         args:
         - --dry-run=false
         - --config-path=/etc/config/config.yaml
@@ -455,11 +455,6 @@ spec:
             secretKeyRef:
               name: github-token
               key: appid
-        - name: GITHUB_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: github-token-robot
-              key: token
         ports:
           - name: http
             containerPort: 8888
@@ -483,9 +478,6 @@ spec:
       - name: s3-credentials
         secret:
           secretName: s3-credentials
-      - name: github-token-robot
-        secret:
-          secretName: github-token-robot
 ---
 apiVersion: v1
 kind: Service
