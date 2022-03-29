@@ -98,11 +98,11 @@ data:
 
     plank:
       job_url_prefix_config:
-        "*": https://prow.bytedanceoss.com/view/
+        "*": https://prow.bytedanceoss.net/view/
       report_templates:
         '*': >-
-            [Full PR test history](https://prow.bytedanceoss.com/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}).
-            [Your PR dashboard](https://prow.bytedanceoss.com/pr?query=is:pr+state:open+author:{{with
+            [Full PR test history](https://prow.bytedanceoss.net/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}).
+            [Your PR dashboard](https://prow.bytedanceoss.net/pr?query=is:pr+state:open+author:{{with
             index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
       default_decoration_configs:
         "*":
@@ -509,7 +509,7 @@ spec:
       port:
         number: 80
   rules:
-  - host: prow.bytedanceoss.com
+  - host: prow.bytedanceoss.net
     http:
       paths:
       - path: /
