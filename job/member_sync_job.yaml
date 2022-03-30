@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: peribolos
-        image: cr-cn-beijing.volces.com/k8s-prow/peribolos:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/peribolos:v20211022-effa07f2d2
         imagePullPolicy: Always  # Good practice for dev/debugging, bad for prod
         args:
         - --config-path=/etc/config/member.yaml
