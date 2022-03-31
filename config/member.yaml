@@ -24,6 +24,12 @@ orgs:
     members:
     - Mel0day
     - pkumza
+    - baiyutang
+    - CoderPoet
+    - duduainankai
+    - horizonzy
+    - li-jin-gou
+    - liu-song
     admins:
     - GuangmingLuo
     - Jeffwan
@@ -35,6 +41,9 @@ orgs:
     - simon0-o
     - SinnerA
     - YangruiEmma
+    - bytedance-oss-robot
+    - Summer-Field
+    - ppzqh
 
     teams:
       bot-ci-team:
@@ -43,6 +52,7 @@ orgs:
 
         members:
         - Summer-Field
+        - bytedance-oss-robot
         maintainers:
         - Jeffwan
         repos:
