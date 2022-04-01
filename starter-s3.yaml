@@ -111,10 +111,10 @@ data:
             path_strategy: explicit
           s3_credentials_secret: s3-credentials
           utility_images:
-            clonerefs: cr-cn-beijing.volces.com/k8s-prow/clonerefs:v20211022-effa07f2d2
-            entrypoint: cr-cn-beijing.volces.com/k8s-prow/entrypoint:v20211022-effa07f2d2
-            initupload: cr-cn-beijing.volces.com/k8s-prow/initupload:v20211022-effa07f2d2
-            sidecar: cr-cn-beijing.volces.com/k8s-prow/sidecar:v20211022-effa07f2d2
+            clonerefs: cr-cn-beijing.volces.com/bytedance-oss-prow/clonerefs:v20211022-effa07f2d2
+            entrypoint: cr-cn-beijing.volces.com/bytedance-oss-prow/entrypoint:v20211022-effa07f2d2
+            initupload: cr-cn-beijing.volces.com/bytedance-oss-prow/initupload:v20211022-effa07f2d2
+            sidecar: cr-cn-beijing.volces.com/bytedance-oss-prow/sidecar:v20211022-effa07f2d2
 
     tide:
       queries:
@@ -177,7 +177,7 @@ spec:
       terminationGracePeriodSeconds: 180
       containers:
       - name: hook
-        image: cr-cn-beijing.volces.com/k8s-prow/hook:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/hook:v20211022-effa07f2d2
         imagePullPolicy: Always
         args:
         - --dry-run=false
@@ -266,7 +266,7 @@ spec:
       serviceAccountName: "sinker"
       containers:
       - name: sinker
-        image: cr-cn-beijing.volces.com/k8s-prow/sinker:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/sinker:v20211022-effa07f2d2
         args:
         - --config-path=/etc/config/config.yaml
         - --dry-run=false
@@ -305,7 +305,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: deck
-        image: cr-cn-beijing.volces.com/k8s-prow/deck:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/deck:v20211022-effa07f2d2
         args:
         - --config-path=/etc/config/config.yaml
         - --plugin-config=/etc/plugins/plugins.yaml
@@ -402,7 +402,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: horologium
-        image: cr-cn-beijing.volces.com/k8s-prow/horologium:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/horologium:v20211022-effa07f2d2
         args:
         - --dry-run=false
         - --config-path=/etc/config/config.yaml
@@ -437,7 +437,7 @@ spec:
       serviceAccountName: "tide"
       containers:
       - name: tide
-        image: cr-cn-beijing.volces.com/k8s-prow/tide:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/tide:v20211022-effa07f2d2
         args:
         - --dry-run=false
         - --config-path=/etc/config/config.yaml
@@ -548,7 +548,7 @@ spec:
       terminationGracePeriodSeconds: 180
       containers:
       - name: statusreconciler
-        image: cr-cn-beijing.volces.com/k8s-prow/status-reconciler:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/status-reconciler:v20211022-effa07f2d2
         args:
         - --dry-run=false
         - --continue-on-error=true
@@ -941,7 +941,7 @@ spec:
     spec:
       containers:
       - name: ghproxy
-        image: cr-cn-beijing.volces.com/k8s-prow/ghproxy:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/ghproxy:v20211022-effa07f2d2
         args:
         - --cache-dir=/cache
         - --cache-sizeGB=99
@@ -1010,7 +1010,7 @@ spec:
             secretKeyRef:
               name: github-token
               key: appid
-        image: cr-cn-beijing.volces.com/k8s-prow/prow-controller-manager:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/prow-controller-manager:v20211022-effa07f2d2
         volumeMounts:
         - name: github-token
           mountPath: /etc/github
@@ -1145,7 +1145,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: crier
-        image: cr-cn-beijing.volces.com/k8s-prow/crier:v20211022-effa07f2d2
+        image: cr-cn-beijing.volces.com/bytedance-oss-prow/crier:v20211022-effa07f2d2
         args:
         - --blob-storage-workers=10
         - --config-path=/etc/config/config.yaml
