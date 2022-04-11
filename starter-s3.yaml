@@ -117,6 +117,11 @@ data:
             sidecar: cr-cn-beijing.volces.com/bytedance-oss-prow/sidecar:v20211022-effa07f2d2
 
     tide:
+      merge_method:
+        kitex-contrib/test-infra: rebase
+
+      target_url: http://prow.bytedanceoss.net/tide
+
       queries:
       - orgs:
         - kitex-contrib
