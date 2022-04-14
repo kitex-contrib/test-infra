@@ -42,6 +42,20 @@ data:
           name: label-config
         config/member.yaml:
           name: member-config
+
+    heart:
+    # Adorees is a list of GitHub logins for members
+    # for whom we will add emojis to comments
+    adorees:
+      - Summer-Field
+      - Jeffwan
+
+    # CommentRegexp is the regular expression for comments
+    # made by adorees that the plugin adds emojis to.
+    # If not specified, the plugin will not add emojis to
+    # any comments.
+    # Compiles into CommentRe during config load.
+    commentregexp: .*
 # ---
 # apiVersion: v1
 # kind: Secret
