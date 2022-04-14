@@ -132,7 +132,7 @@ data:
 
     tide:
       merge_method:
-        kitex-contrib/test-infra: rebase
+        kitex-contrib/test-infra: squash
 
       target_url: http://prow.bytedanceoss.net/tide
 
