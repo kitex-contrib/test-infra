@@ -203,34 +203,35 @@ data:
       name: peribolos
       labels:
         app: peribolos
-      containers:
-      - name: peribolos
-        image: cr-cn-beijing.volces.com/bytedance-oss-prow/peribolos:v20211022-effa07f2d2
-        imagePullPolicy: Always  # Good practice for dev/debugging, bad for prod
-        args:
-        - --config-path=/etc/config/member.yaml
-        - --github-token-path=/etc/github/token
-        - --min-admins=2
-        - --fix-org=true
-        - --fix-org-members=true
-        - --fix-teams=true
-        - --fix-team-members=true
-        # - --confirm=true
-        volumeMounts:
+      spec:
+        containers:
+        - name: peribolos
+          image: cr-cn-beijing.volces.com/bytedance-oss-prow/peribolos:v20211022-effa07f2d2
+          imagePullPolicy: Always  # Good practice for dev/debugging, bad for prod
+          args:
+          - --config-path=/etc/config/member.yaml
+          - --github-token-path=/etc/github/token
+          - --min-admins=2
+          - --fix-org=true
+          - --fix-org-members=true
+          - --fix-teams=true
+          - --fix-team-members=true
+          # - --confirm=true
+          volumeMounts:
+          - name: oauth
+            mountPath: /etc/github
+            readOnly: true
+          - name: config
+            mountPath: /etc/config
+            readOnly: true
+        restartPolicy: Never
+        volumes:
         - name: oauth
-          mountPath: /etc/github
-          readOnly: true
-        - name: test-config
-          mountPath: /etc/config
-          readOnly: true
-      restartPolicy: Never
-      volumes:
-      - name: oauth
-        secret:
-          secretName: oauth-token
-      - name: test-config
-        configMap:
-          name: member-config
+          secret:
+            secretName: oauth-token
+        - name: config
+          configMap:
+            name: member-config
 ---
 apiVersion: apps/v1
 kind: Deployment
