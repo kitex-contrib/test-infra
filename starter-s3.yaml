@@ -31,7 +31,7 @@ data:
         - verify-owners
         - wip
         - yuks
-        - cla
+        - lifecycle
       kitex-contrib/test-infra:
         plugins:
         - config-updater
