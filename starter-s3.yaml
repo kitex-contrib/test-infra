@@ -178,6 +178,8 @@ data:
         containers:
         - name: label-sync
           image: cr-cn-beijing.volces.com/bytedance-oss-prow/label_sync:v20211022-effa07f2d2
+          command:
+          - /app/label_sync/app.binary
           args:
           # - --confirm=true
           - --orgs=kitex-contrib
@@ -207,6 +209,8 @@ data:
         containers:
         - name: peribolos
           image: cr-cn-beijing.volces.com/bytedance-oss-prow/peribolos:v20211022-effa07f2d2
+          command: 
+          - /app/prow/cmd/peribolos/app.binary
           imagePullPolicy: Always  # Good practice for dev/debugging, bad for prod
           args:
           - --config-path=/etc/config/member.yaml
