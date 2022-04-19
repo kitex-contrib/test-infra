@@ -57,7 +57,7 @@ orgs:
         maintainers:
         - Jeffwan
         repos:
-          resolver-dns: write
+          test-infra: write
 # Here is the demo configuration file.
 # Before you build up your own configuration file please have a close look at it.
 #
