@@ -169,7 +169,7 @@ data:
         containers:
         - image: alpine
           command: ["/bin/date"]
-    - cron: "17 * * * *"  # Every hour at 17 minutes past the hour
+    - interval: 12h
       name: label-sync
       labels:
         app: label-sync
@@ -201,7 +201,7 @@ data:
         - name: config
           configMap:
             name: label-config
-    - cron: "17 * * * *"  # Every hour at 17 minutes past the hour
+    - interval: 12h
       name: peribolos
       labels:
         app: peribolos
