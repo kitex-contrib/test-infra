@@ -100,16 +100,16 @@ default:
       previously:
         - name: committee/product-security
     - color: e11d21
-      description: Indicates the PR's author has not signed the CNCF CLA.
-      name: 'cncf-cla: no'
+      description: Indicates the PR's author has not signed the Bytedance CLA.
+      name: 'bytedance-cla: no'
       target: prs
-      prowPlugin: cla
+      prowPlugin: cla_bytedance
       addedBy: prow
     - color: bfe5bf
-      description: Indicates the PR's author has signed the CNCF CLA.
-      name: 'cncf-cla: yes'
+      description: Indicates the PR's author has signed the Bytedance CLA.
+      name: 'bytedance-cla: yes'
       target: prs
-      prowPlugin: cla
+      prowPlugin: cla_bytedance
       addedBy: prow
     - color: e11d21
       description: DEPRECATED. Indicates that a PR should not merge. Label can only be manually applied/removed.
