@@ -181,7 +181,7 @@ data:
           command:
           - /app/label_sync/app.binary
           args:
-          # - --confirm=true
+          - --confirm=true
           - --orgs=kitex-contrib
           - --config=/etc/config/labels.yaml
           - --token=/etc/github/token
@@ -220,7 +220,7 @@ data:
           - --fix-org-members=true
           - --fix-teams=true
           - --fix-team-members=true
-          # - --confirm=true
+          - --confirm=true
           volumeMounts:
           - name: oauth
             mountPath: /etc/github
