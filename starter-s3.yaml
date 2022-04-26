@@ -162,13 +162,6 @@ data:
     presubmits:
 
     periodics:
-    - interval: 3h
-      agent: kubernetes
-      name: echo-test
-      spec:
-        containers:
-        - image: alpine
-          command: ["/bin/date"]
     - interval: 12h
       name: label-sync
       labels:
