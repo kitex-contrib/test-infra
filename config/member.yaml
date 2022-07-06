@@ -45,6 +45,7 @@ orgs:
     - bytedance-oss-robot
     - Summer-Field
     - ppzqh
+    - zhangxupeng0
 
     teams:
       bot-ci-team:
@@ -52,6 +53,7 @@ orgs:
         privacy: closed
 
         members:
+        - zhangxupeng0
         - Summer-Field
         - bytedance-oss-robot
         maintainers:
