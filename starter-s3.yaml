@@ -529,7 +529,6 @@ spec:
         - --history-uri=s3://tide/tide-history.json
         - --github-app-id=$(GITHUB_APP_ID)
         - --github-app-private-key-path=/etc/github/cert
-        - --v=4
         env:
         - name: GITHUB_APP_ID
           valueFrom:
