@@ -49,6 +49,7 @@ data:
     adorees:
       - Summer-Field
       - Jeffwan
+      - zhangxupeng0
 
     # CommentRegexp is the regular expression for comments
     # made by adorees that the plugin adds emojis to.
