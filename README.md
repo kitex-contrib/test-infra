@@ -1,5 +1,3 @@
-
-
 # test-infra
 
 test-infra is a CI/CD system aimming at kitex-contrib's Open Source Project Management.
@@ -11,6 +9,5 @@ test-infra is a CI/CD system aimming at kitex-contrib's Open Source Project Mana
 3. automatic PR merging.
 
 In this repository, you can configure:
-
 1. Organization's members.
 2. Organization's labels.
